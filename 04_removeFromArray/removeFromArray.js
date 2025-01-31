@@ -1,17 +1,12 @@
-const removeFromArray = function(x,num) {
-    y = [];
-
-    for(let i = 0;i < x.length;i++) {
-        if(x[i] !== num) {
-            y.push(x[i]); 
-        }
-        else {
-            continue
-        }
-    }
-    return y;
-
-
+const removeFromArray = function(y,...args){
+  let newArray = [];
+y.forEach((items) => {
+  if(!args.includes(items)) {
+    newArray.push(items)
+  }
+  
+});
+return newArray;
 };
 
 // Do not edit below this line
